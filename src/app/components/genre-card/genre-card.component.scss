@@ -1,0 +1,21 @@
+@import 'src/styles/index';
+
+.genre {
+    display: inline-block;
+    padding: $spacing-xxs $spacing-sml;
+    background-color: $white;
+    border-radius: $spacing-xs;
+    margin-right: $spacing-xs;
+    font-size: $font-size-sm;
+    line-height: 1.5;
+    color: $black;
+}
+
+@media (max-width: 768px) {
+    .movie-detail {
+        font-size: $font-size-xs;
+    }
+    .genre {
+        margin-bottom: $spacing-xxs;
+    }
+}

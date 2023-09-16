@@ -1,0 +1,54 @@
+@import 'src/styles/index';
+
+.movie-series-container {
+    background-color: $theme-color-base;
+    font-size: $font-size-sm;
+    line-height: 1.5;
+    letter-spacing: 0.06rem;
+    color: $white;
+    position: relative;
+    width: 100%;
+}
+
+.img-container {
+    margin-bottom: $spacing-sm;
+    background-image: url('/assets/bookmark-background.png');
+    background-repeat: no-repeat;
+}
+
+.card-details {
+    display: flex;
+    gap: $spacing-s;
+    margin-bottom: $spacing-xxs;
+    align-items: center;
+}
+
+.image-card {
+    width: 100% !important;
+    height: 240px;
+    border-radius: $border-radius-lg;
+    object-fit: cover;
+    object-position: top;
+}
+
+h2 {
+    font-size: $font-size-md;
+    line-height: 1.5;
+    color: $white;
+}
+
+a {
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .year-label {
+        font-size: $font-size-xxs;
+    }
+    h2 {
+        font-size: $font-size-xs;
+    }
+    .image-card {
+        height: 200px;
+        border-radius: $border-radius-sm;
+    }
+}

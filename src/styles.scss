@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap';
+@import 'src/styles/index';
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.owl-next,
+    .owl-prev {
+        background-color: transparent !important;
+    }
+.movie-type {
+    .owl-carousel .owl-item img {
+        width: auto;
+        background-color: transparent;
+    }
+    
+}
+
+.movie-type .owl-nav {
+    top: calc(50% - 112px);
+}
+.owl-nav {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: space-between;
+    transform: translateY(10px);
+}
+.banner-container .owl-nav {
+    top: calc(50% - 21px);
+}
+
+.ol,
+ul {
+    padding-left: 0rem;
+}
+
+.dropdown-menu {
+    --bs-dropdown-min-width: none;
+}

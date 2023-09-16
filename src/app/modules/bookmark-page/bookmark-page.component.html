@@ -1,0 +1,14 @@
+<div class="bookmark-title">{{bookmarkService.bookmarkedItems.length === 0 ? 'No Bookmarked Items' : 'Bookmarked Movies' }}</div>
+<div class="movie">
+    <div *ngFor="let movie of bookmarkService.bookmarkedItems">
+        <app-movie-series-card
+            routerLink="{{movie.label==='Movie'?'movies':'tv'}}/details/{{ movie.id }}"
+            label="{{ movie.label }}"
+            title="{{ movie.title }}"
+            year="{{ movie.year }}"
+            [image]='imageBaseUrl + movie.image'
+            icon="{{ movie.label === 'Movie' ? 'assets/movie-icon.png' : 'assets/series-icon.png' }}"
+            id="{{ movie.id }}"
+        ></app-movie-series-card>
+    </div>
+</div>

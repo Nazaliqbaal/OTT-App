@@ -1,0 +1,20 @@
+@import 'src/styles/index';
+
+.genre-card {
+    display: block;
+    padding: 104px 0;
+    border-radius: $border-radius-lg;
+    border: none;
+    color: $white;
+    font-size: $font-size-md;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .genre-card {
+        font-size: $font-size-sm;
+        padding: $spacing-lgs 0;
+    }
+}

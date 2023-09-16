@@ -1,0 +1,25 @@
+<div class="movie-series-container">
+    <div class="img-container">
+        <a [routerLink]="detailRouter">
+            <img [src]="image" alt="image card" class="image-card" />
+        </a>
+        <app-bookmark-icon
+            [title]="title"
+            [label]="label"
+            [year]="year"
+            [id]="id"
+            [image]="image"
+        ></app-bookmark-icon>
+    </div>
+    <div class="card-details">
+        <div class="year-label">{{ year }}</div>
+        <img src="assets/dot.png" alt="" />
+        <img [src]="icon" alt="movieroseriesicon" />
+        <div class="year-label">{{ label }}</div>
+    </div>
+    <div class="movie-series-title">
+        <a [routerLink]="detailRouter">
+            <h2>{{ title }}</h2>
+        </a>
+    </div>
+</div>

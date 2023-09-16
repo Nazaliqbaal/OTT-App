@@ -1,0 +1,23 @@
+@import 'src/styles/index';
+
+.card-container {
+    border-radius: $border-radius-md;
+    padding: $spacing-xxl $spacing-lg;
+    width: 100%;
+    color: $white;
+    height: 100%;
+
+    &.primary {
+        background-color: $dark-blue-tint;
+    }
+
+    &.secondary {
+        background-color: $black;
+    }
+}
+@media (max-width: 768px) {
+    .card-container {
+        padding: $spacing-md;
+        border-radius: $border-radius-sm;
+    }
+}

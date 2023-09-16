@@ -1,0 +1,37 @@
+<div class="movie">
+    <div *ngIf="movie">
+        <div class="movie-conatiner">
+            <img [src]="'https://www.themoviedb.org/t/p/w500' + movie.poster_path" class="movie-img" />
+            <div>
+                <h1 class="movie-title">{{ movie.original_title || movie.original_name }}</h1>
+                <span class="movie-rating">{{ (movie.vote_average / 2).toFixed(1) }}</span>
+                <app-star-rating rating="{{ movie.vote_average / 2 }}"></app-star-rating>
+                <div class="movie-detail">
+                    <app-movie-detail
+                        label="Length"
+                        movieDetail="{{
+                            movie.runtime ||
+                                (movie.episode_run_time && movie.episode_run_time.length > 0 ? movie.episode_run_time[0] + ' mins.' : 'N/A')
+                        }}"
+                    ></app-movie-detail>
+                    <app-movie-detail label="Language" movieDetail="{{ movie.spoken_languages[0].english_name }}"></app-movie-detail>
+                    <app-movie-detail
+                        label="Year"
+                        movieDetail="{{ movie.release_date?.split('-')[0] || movie.first_air_date.split('-')[0] }}"
+                    ></app-movie-detail>
+                    <app-movie-detail label="Status" movieDetail="{{ movie.status }}"></app-movie-detail>
+                </div>
+                <div>
+                    <h2 class="movie-label">Genres</h2>
+                    <app-genre-card *ngFor="let genre of movie.genres" [genre]="genre.name"></app-genre-card>
+                </div>
+                <h2 class="movie-label">Synopsis</h2>
+                <span class="movie-synopsis">{{ movie.overview }}</span>
+                <div>
+                    <h2 class="movie-label">Casts</h2>
+                    <app-cast-member *ngFor="let castMember of movieCredits?.cast" [name]="castMember.name"></app-cast-member>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

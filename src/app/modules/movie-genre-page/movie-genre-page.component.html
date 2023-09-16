@@ -1,0 +1,9 @@
+<ul>
+    <div *ngFor="let genre of movieSeriesGenres; let i = index">
+        <app-genre
+            [color]="isApi1 ? (i % 2 === 0 ? '#0E7490' : '#171E31') : i % 2 === 0 ? '#0F766E' : '#171E31'"
+            genre="{{ genre.name }}"
+            routerLink="{{ genre.id }}"
+        ></app-genre>
+    </div>
+</ul>

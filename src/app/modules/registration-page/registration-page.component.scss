@@ -1,0 +1,75 @@
+@import 'src/styles/index';
+
+.registration-page-container {
+    background-image: $background-gradient, url('/assets/OTT-background.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px $spacing-md;
+}
+
+.register-heading {
+    font-size: $font-size-md;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: $spacing-md;
+}
+::ng-deep app-card > .card-container {
+    padding: $spacing-md 64px;
+}
+.registration-page-body {
+    width: 686px;
+}
+.success-message {
+    color: $light-green-tint;
+}
+
+.error-message {
+    color: $bright-red;
+}
+.responseMessage {
+    text-align: center;
+    margin-top: $spacing-xs;
+}
+.btn-container {
+    margin-top: $spacing-xs;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-heading {
+    font-size: $font-size-xl;
+    line-height: 1.5;
+    text-align: center;
+    color: $dark-red;
+    position: relative;
+    z-index: 1;
+}
+
+.movie-heading-background {
+    position: relative;
+    z-index: 0;
+    margin-bottom: $spacing-lgs;
+
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        filter: blur(25px);
+    }
+}
+@media (max-width: 768px) {
+    .movie-heading-background {
+        margin-bottom: $spacing-xl;
+    }
+}

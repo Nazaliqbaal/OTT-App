@@ -1,0 +1,9 @@
+<div class="navigation-menu-container">
+    <ul>
+        <li *ngFor="let item of items" class="list-item">
+            <a [routerLink]="item.path" [class.active]="item.path === currentUrl">
+                <img [src]="item.icon" [alt]="item.name" class="icons" />
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,19 @@
+@import 'src/styles/index';
+
+.cast-member {
+    display: inline-block;
+    border: 1px solid $white;
+    border-radius: $border-radius-sm;
+    margin-right: $spacing-xs;
+    margin-bottom: $spacing-xs;
+    padding: $spacing-xxs $spacing-sml;
+    font-size: $font-size-xs;
+    line-height: 1.5;
+    color: $white;
+}
+
+@media (max-width: 768px) {
+    .cast-member {
+        font-size: $font-size-xms;
+    }
+}

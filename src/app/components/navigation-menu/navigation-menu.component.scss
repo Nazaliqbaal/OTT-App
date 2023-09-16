@@ -1,0 +1,41 @@
+@import 'src/styles/index';
+
+.navigation-menu-container {
+    background-color: $dark-blue-hue;
+    width: 34.89px;
+    margin: auto;
+}
+
+ul {
+    text-decoration: none;
+    display: flex;
+    gap: $spacing-xxmd;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-item {
+    list-style: none;
+    a {
+        &.active {
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        gap: 0;
+        padding: $spacing-sm $spacing-xmd $spacing-normal $spacing-xmd;
+    }
+    .navigation-menu-container {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 999;
+    }
+}

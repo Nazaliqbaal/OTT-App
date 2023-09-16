@@ -1,0 +1,25 @@
+@import 'src/styles/index';
+
+.star {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    color: $silver;
+}
+
+.full {
+    color: $orange;
+}
+
+.half {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    color: $orange;
+}
+
+@media (max-width: 768px) {
+    .star {
+        font-size: 1rem;
+    }
+}

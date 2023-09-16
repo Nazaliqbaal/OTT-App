@@ -1,0 +1,5 @@
+<span class="dropdown">
+    <img [src]="icon" [class.highlight]="isOpen" (click)="isOpen ? closeDropdown() : openDropdown()" class="dropdown-icon" />
+    <app-drop-down-menu *ngIf="isOpen" [dropdownData]="dropDownData" class="dropdown-container"></app-drop-down-menu>
+</span>
+<div *ngIf="isOpen" (click)="closeDropdown()" class="dropdown-mask"></div>

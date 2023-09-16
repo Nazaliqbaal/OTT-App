@@ -1,0 +1,22 @@
+@import 'src/styles/index';
+
+.bookmark-icon {
+    position: absolute;
+    top: $spacing-xxxs;
+    right: $spacing-sml;
+    z-index: 2;
+    width: 15px !important;
+}
+
+.btn-container {
+    background: #111111;
+    opacity: 0.4;
+    width: $spacing-lgs;
+    height: $spacing-lgs;
+    border-radius: 50%;
+    position: absolute;
+    top: 4%;
+    right: 6%;
+    z-index: 0;
+    border: none;
+}

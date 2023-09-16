@@ -1,0 +1,11 @@
+<button
+    [ngClass]="{
+        large: size === 'large',
+        primary: type === 'primary',
+        secondary: type === 'secondary'
+    }"
+    [disabled]="disabled"
+    type="submit"
+>
+    {{ label }}
+</button>

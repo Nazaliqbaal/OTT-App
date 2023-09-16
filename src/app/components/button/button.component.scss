@@ -1,0 +1,43 @@
+@import 'src/styles/index';
+
+button {
+    border-radius: $border-radius-sm;
+    color: $white;
+    font-size: $font-size-sm;
+    line-height: 1.5;
+    border: none;
+    width: 174px;
+    padding: $spacing-xs 0;
+    color: $white;
+
+    &.large {
+        padding: $spacing-sm;
+        background-color: $light-grey;
+        width: auto;
+        font-size: $font-size-xs;
+    }
+
+    &.primary {
+        background-color: $dark-red;
+        &[disabled] {
+            background-color: $light-grey;
+        }
+        &:not([disabled]) {
+            cursor: pointer;
+        }
+    }
+    &.secondary {
+        color: $dark-blue-tint;
+        background-color: $silver;
+        cursor: pointer;
+        &[disabled] {
+            opacity: 0.5;
+        }
+    }
+}
+@media (max-width: 768px) {
+    button {
+        font-size: $font-size-xs;
+        width: 124px;
+    }
+}

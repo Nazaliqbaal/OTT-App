@@ -1,0 +1,67 @@
+<div *ngIf="allTrendingMovies?.length > 0" class="banner-container">
+    <owl-carousel-o [options]="customOptions1">
+        <ng-container *ngFor="let movie of allTrendingMovies">
+            <ng-template carouselSlide>
+                <div class="slide">
+                    <div>
+                        <app-banner
+                            routerLink="movies/details/{{ movie.id }}"
+                            title="{{ movie.title || movie.name }}"
+                            year="{{
+                                movie.media_type === 'movie' ? (movie.release_date | date: 'yyyy') : (movie.first_air_date | date: 'yyyy')
+                            }}"
+                            [background]="imageBaseUrl + movie.poster_path"
+                            overview="{{ movie.overview }}"
+                            voteAverage="{{ movie.vote_average }}"
+                        ></app-banner>
+                    </div>
+                </div>
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
+</div>
+<div class="movies">
+    <div class="movie-type-title">
+        <p class="movie-type-label">Trending</p>
+        <p class="movie">MOVIE</p>
+    </div>
+    <div class="movie-type">
+        <div *ngIf="allTrendingMovies?.length > 0">
+            <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide *ngFor="let movie of allTrendingMovies">
+                    <div class="movie-type-trending">
+                        <app-movie-series-card
+                            routerLink="movies/details/{{ movie.id }}"
+                            title="{{ movie.title || movie.name }}"
+                            [image]="imageBaseUrl + movie.poster_path"
+                            icon="{{ movie.media_type === 'tv' ? 'assets/series-icon.png' : 'assets/movie-icon.png' }}"
+                            label="{{ movie.media_type === 'tv' ? 'TV series' : 'Movie' }}"
+                            year="{{
+                                movie.media_type === 'movie' ? (movie.release_date | date: 'yyyy') : (movie.first_air_date | date: 'yyyy')
+                            }}"
+                            id="{{ movie.id }}"
+                        ></app-movie-series-card>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+
+    <div class="movie-type-title">
+        <p class="movie-type-label">Popular</p>
+        <p class="movie">MOVIE</p>
+    </div>
+    <div class="movie-type-popular">
+        <div *ngFor="let movie of allPopularMovies">
+            <app-movie-series-card
+                routerLink="movies/details/{{ movie.id }}"
+                title="{{ movie.original_title }}"
+                [image]="imageBaseUrl + movie.poster_path"
+                icon="{{ movie.media_type === 'tv' ? 'assets/series-icon.png' : 'assets/movie-icon.png' }}"
+                label="{{ movie.media_type === 'tv' ? 'TV series' : 'Movie' }}"
+                year="{{ movie.release_date | date: 'yyyy' }}"
+                id="{{ movie.id }}"
+            ></app-movie-series-card>
+        </div>
+    </div>
+</div>

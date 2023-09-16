@@ -1,0 +1,38 @@
+@import 'src/styles/index';
+
+.dropdown-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $color-mask;
+    z-index: 1;
+}
+
+.dropdown {
+    z-index: 2;
+    position: relative;
+}
+
+.dropdown-icon:hover {
+    box-shadow: 0 0 5px $white-tint;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dropdown-container {
+    position: relative;
+}
+
+.highlight {
+    box-shadow: 0 0 5px $dark-red;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .dropdown-icon {
+        width: $background-bg;
+        margin-bottom: $spacing-normal;
+    } 
+}

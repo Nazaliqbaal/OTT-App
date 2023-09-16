@@ -1,0 +1,7 @@
+<div class="input-container">
+    <span class="input-container-label">{{ label }} </span>
+    <input [(ngModel)]="input" [type]="type" [placeholder]="placeholder" class="input-container-value" />
+    <div class="validation-msg">
+        <span *ngIf="error$ | async as error" class="error-msg">{{ error }}</span>
+    </div>
+</div>

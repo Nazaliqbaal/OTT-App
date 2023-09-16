@@ -1,0 +1,48 @@
+@import 'src/styles/index';
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $spacing-lgs;
+    position: relative;
+}
+
+.input-container-label {
+    margin-bottom: $spacing-xs;
+    font-family: 'Poppins';
+    font-size: $font-size-sm;
+    line-height: 1.5;
+    color: $white;
+}
+.validation-msg {
+    margin-top: $spacing-xxs;
+    font-size: $font-size-xs;
+    position: absolute;
+    top: $spacing-xxxl;
+    color: $dark-red;
+}
+
+.input-container-value {
+    background-color: $dark-grey;
+    border-radius: $spacing-xs;
+    width: 338px;
+    height: $spacing-lgs;
+    font-size: $font-size-xs;
+    line-height: 1.5;
+    color: $silver;
+    padding: $spacing-xs $spacing-sm;
+    border: none;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .input-container {
+        margin-bottom: $spacing-normal;
+        .input-container-label {
+            font-size: $font-size-xxs;
+        }
+        .input-container-value {
+            font-size: $font-size-s;
+        }
+    }
+}

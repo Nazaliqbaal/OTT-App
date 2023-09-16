@@ -1,0 +1,31 @@
+@import 'src/styles/index';
+
+.search-results {
+    background-color: $theme-color-base;
+    padding: 0 $spacing-sm;
+}
+.movie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $spacing-md;
+}
+.search-item-count {
+    color: $white;
+    font-size: $font-size-xxl;
+    line-height: 1.5;
+    margin-bottom: $spacing-normal;
+    margin-top: $spacing-lg;
+}
+@media (max-width: 768px) {
+    .movie {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .search-results {
+        padding: 0 $spacing-xsm;
+    }
+}
+@media (max-width: 384px) {
+    .movie {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

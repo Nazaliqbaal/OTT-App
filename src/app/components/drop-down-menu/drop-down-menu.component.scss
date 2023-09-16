@@ -1,0 +1,34 @@
+@import 'src/styles/index';
+
+.dropdown-menu {
+    display: inline-block;
+    width: 120px;
+    vertical-align: top;
+    position: relative;
+    line-height: 1.5;
+    background-color: $white-tint;
+    padding: $spacing-xs 0px $spacing-xs 0px;
+    border-radius: $border-radius-sm;
+}
+
+.dropdown-menu :hover {
+    background-color: $silver;
+}
+
+.dropdown-menu-container {
+    font-family: 'Poppins';
+    font-size: $font-size-sm;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+        width: $spacing-xxxxl;
+    }
+
+    .dropdown-menu-container {
+        font-size: $spacing-sml;
+    }
+}

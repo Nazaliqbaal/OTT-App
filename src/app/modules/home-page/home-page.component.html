@@ -1,0 +1,23 @@
+<div class="home">
+    <div class="home-container">
+        <div class="home-container-details">
+            <div *ngIf="!(router.url.includes('/detail') || router.url.includes('/search')) || !isMobileView()">
+                <app-navigation-bar></app-navigation-bar>
+            </div>
+            <div class="search-bar-movies-card">
+                <div *ngIf="isMobileView()">
+                    <app-profile-menu
+                        *ngIf="router.url === '/home'"
+                        [dropDownData]="dropDownData"
+                        icon="assets/profile-menu.svg"
+                    ></app-profile-menu>
+                    <a *ngIf="router.url.includes('/detail') || router.url.includes('/search')" (click)="goBack()"
+                        ><img src="assets/back-arrow.png" class="back-arrow"
+                    /></a>
+                </div>
+                <app-search-bar (search)="searchResult($event)" [inputPlaceholder]="inputPlaceholder"></app-search-bar>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

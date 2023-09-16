@@ -1,0 +1,26 @@
+@import 'src/styles/index';
+ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: $spacing-normal;
+    margin-top: $spacing-xl;
+    background-color: $theme-color-base;
+}
+
+@media (max-width: 768px) {
+    ul {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: $spacing-sm;
+        margin-top: $spacing-md;
+    }
+    ::ng-deep app-genre > .genre-card {
+        font-size: $font-size-sm;
+        padding: $spacing-lggs 0;
+    }
+}
+
+@media (max-width: 420px) {
+    ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,27 @@
+@import 'src/styles/index';
+
+.no-result-body {
+    background-image: url('/assets/no-result-background.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+h2 {
+    font-size: $font-size-bg;
+    line-height: 1.5;
+    color: $white;
+}
+.no-result-message {
+    display: flex;
+    gap: $spacing-normal;
+    align-items: center;
+    padding: $spacing-xls 0 0 $spacing-xls;
+}
+@media (max-width: 768px) {
+    .no-result-message {
+        flex-direction: column;
+        gap: $spacing-normal;
+        align-items: flex-start;
+        padding: $background-bg $spacing-normal 0 $spacing-normal;
+    }
+}

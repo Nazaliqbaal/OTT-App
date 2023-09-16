@@ -1,0 +1,37 @@
+<div class="login">
+    <div class="login-title-container">
+        <div class="login-title-background">
+            <h1 class="login-title">Movie OTT</h1>
+        </div>
+    </div>
+    <div class="signIn login-card">
+        <app-card type="secondary" class="singIn-card">
+            <p class="signIn-title">Sign<span class="signIn-suffix">In</span></p>
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                <app-input label="Email" placeholder="Email" formControlName="email" name="identifier" class="input-field" ngDefaultControl></app-input>
+                <app-input
+                    label="Password"
+                    [type]="'password'"
+                    placeholder="Password"
+                    formControlName="password"
+                    name="password"
+                    ngDefaultControl
+                ></app-input>
+                <div class="signIn-btn-container">
+                    <app-button [disabled]="!loginForm.valid" label="Sign In" type="primary"></app-button>
+                </div>
+            </form>
+            <div *ngIf="errorMessage" class="error-message responseMessage">{{ errorMessage }}</div>
+        </app-card>
+        <app-card class="singUp-card">
+            <div class="signUp">
+                <div class="signUp-title">Welcome to <span class="signUp-suffix">Movie OTT</span></div>
+                <img src="/assets/logo.svg" class="signUp-logo" />
+                <p class="signUp-description">New here? <span class="signUp-account">Create an account here</span></p>
+                <div class="signUp-btn-container">
+                    <app-button (click)="onSignUpClick()" label="Sign Up" type="secondary"></app-button>
+                </div>
+            </div>
+        </app-card>
+    </div>
+</div>

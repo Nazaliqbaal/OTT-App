@@ -1,0 +1,24 @@
+<div
+    infinite-scroll
+    [infiniteScrollDistance]="1"
+    [infiniteScrollUpDistance]="1"
+    [infiniteScrollThrottle]="500"
+    (scrolled)="onScroll()"
+    class="search-results"
+>
+    <div class="movie">
+        <div *ngFor="let movie of movieGenreDetails">
+            <app-movie-series-card
+                routerLink="details/{{ movie.id }}"
+                label="{{ currentMovieorSeriesUrl.includes('series') ? 'TV series' : 'Movie' }}"
+                title="{{ currentMovieorSeriesUrl.includes('movies') ? movie.original_title : movie.original_name }}"
+                year="{{
+                    currentMovieorSeriesUrl.includes('movies') ? (movie.release_date | date: 'yyyy') : (movie.first_air_date | date: 'yyyy')
+                }}"
+                [image]="imageBaseUrl + movie.poster_path"
+                icon="{{ currentMovieorSeriesUrl.includes('series') ? 'assets/series-icon.png' : 'assets/movie-icon.png' }}"
+                id="{{ movie.id }}"
+            ></app-movie-series-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+@import 'src/styles/index';
+
+.movie-type-title {
+    display: flex;
+    align-items: center;
+    margin-top: $spacing-lg;
+    flex-wrap: wrap;
+}
+
+.movie-type-label {
+    font-weight: 400;
+    font-size: $font-size-xxl;
+    line-height: 1.5;
+    color: $white;
+}
+
+.movie-type-trending {
+    margin-right: $spacing-md;
+}
+
+.movie {
+    font-size: $font-size-xs;
+    line-height: 1.5;
+    letter-spacing: 0.07rem;
+    color: $white;
+    padding: $spcaing-xsl $spacing-sm;
+    border: 2px solid $white-tint;
+    border-radius: $spacing-xs;
+    display: inline-block;
+    margin-left: $spacing-sm;
+}
+
+.movie-type-popular {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $spacing-md;
+}
+
+.movies {
+    background-color: $theme-color-base;
+}
+
+@media (max-width: 768px) {
+    .movie-type-popular {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

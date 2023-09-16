@@ -1,0 +1,39 @@
+@import 'src/styles/index';
+
+.home {
+    background-color: $theme-color-base;
+    min-height: 100vh;
+}
+
+.home-container {
+    padding: $spacing-md $spacing-xxxlg 0px $spacing-md;
+}
+
+.home-container-details {
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-lg;
+}
+
+.search-bar-movies-card {
+    width: 100%;
+    min-width: $spacing-xxxs;
+}
+
+@media (max-width: 768px) {
+    .home-container-details {
+        flex-direction: column-reverse;
+    }
+
+    .home-container {
+        padding: 0;
+    }
+
+    .search-bar-movies-card {
+        padding: $spacing-lgs $spacing-normal 0 $spacing-normal;
+    }
+
+    .back-arrow {
+        margin-bottom: 25px;
+    }
+}

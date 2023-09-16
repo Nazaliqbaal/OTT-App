@@ -1,0 +1,38 @@
+@import 'src/styles/index';
+
+.bookmark-title {
+    color: $white;
+    font-size: $font-size-xxl;
+    line-height: 1.5;
+    margin-bottom: $spacing-normal;
+    margin-top: $spacing-lg;
+}
+
+.movie {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: $spacing-md;
+    background-color: $theme-color-base;
+}
+@media (max-width: 990px) {
+    .movie {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .movie {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .search-results {
+        padding: 0 $spacing-xsm;
+    }
+    .bookmark-title {
+        font-size: $font-size-md;
+    }
+}
+
+@media (max-width: 420px) {
+    .movie {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

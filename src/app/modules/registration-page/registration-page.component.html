@@ -1,0 +1,28 @@
+<div class="registration-page-container">
+    <div class="registration-page-body">
+        <div class="movie-heading-background">
+            <h1 class="movie-heading">Movie OTT</h1>
+        </div>
+        <app-card type="primary">
+            <h1 class="register-heading">Register</h1>
+            <form [formGroup]="registerForm" (ngSubmit)="onRegistration()">
+                <app-input [formGroup]="registerForm" label="Full Name" placeholder="Full Name" formControlName="username" ngDefaultControl></app-input>
+                <app-input label="Email" placeholder="Email" formControlName="email" ngDefaultControl></app-input>
+                <app-input label="Password" [type]="'password'" placeholder="Password" formControlName="password" ngDefaultControl></app-input>
+                <app-input
+                    label="Confirm Password"
+                    [type]="'password'"
+                    placeholder="Confirm Password"
+                    formControlName="confirmpassword"
+                    ngDefaultControl
+                ></app-input>
+                <div class="btn-container">
+                    <app-button label="Sign In" [disabled]="!registerForm.valid" type="primary"></app-button>
+                </div>
+            </form>
+            <div class="responseMessage" [ngClass]="{ 'success-message': successMessage, 'error-message': errorMessage }">
+                {{ successMessage || errorMessage }}
+            </div>
+        </app-card>
+    </div>
+</div>

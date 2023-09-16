@@ -1,0 +1,23 @@
+<div
+    class="background-body"
+    [routerLink]="movieRoute"
+    [style.backgroundImage]="
+        'linear-gradient(to right, rgba(128, 128, 128, 1) 0%, rgba(128, 128, 128, 0.7) 50%, rgba(128, 128, 128, 0) 100%),url(' +
+        background +
+        ')'
+    "
+>
+    <div class="banner-info">
+        <h2 class="banner-title">
+            {{ title }}
+        </h2>
+        <div class="second-line-detail">
+            <p>Vote: {{ voteAverage }}</p>
+            <p>.</p>
+            <p class="detail-year">{{ year }}</p>
+        </div>
+        <p class="banner-detail">
+            {{ overview }}
+        </p>
+    </div>
+</div>

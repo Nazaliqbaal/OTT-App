@@ -1,0 +1,18 @@
+<div class="navigation-bar-container">
+    <div class="logo-container">
+        <img [routerLink]="logoRouterLink" src="assets/logo.png" alt="logo" />
+    </div>
+    <app-navigation-menu
+        [items]="[
+            { name: 'home', icon: 'assets/home-icon.svg', path: '/home' },
+            { name: 'movie', icon: 'assets/movie-icon.svg', path: '/home/movies' },
+            { name: 'series', icon: 'assets/series-icon.svg', path: '/home/series' },
+            { name: 'bookmark', icon: 'assets/bookmark-icon.svg', path: '/home/bookmarks' }
+        ]"
+        class="navigation-menu"
+    ></app-navigation-menu>
+    <div class="profile-container">
+        <app-profile-menu [dropDownData]="dropDownData" icon="assets/profile-menu.svg"></app-profile-menu>
+    </div>
+</div>
+

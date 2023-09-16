@@ -1,0 +1,4 @@
+<div class="search-bar-container">
+    <input [placeholder]="inputPlaceholder" (input)="onSearch($event)" type="text" class="searchInput" />
+    <app-button [disabled]="!searchValue" (click)="onSeachButtonClick()" size="large" label="Search"></app-button>
+</div>
