@@ -1,8 +1,19 @@
-# OttApp
+# Movie-OTT
 
-This is an OTT platform, where user can register and watch shows. You can also bookmark their favourite shows and easily access them via bookmark menu. The complete executions details can be found here:
+Movie OTT streaming platform, offers an immersive entertainment experience. With this app, users can sign up and sign in, enabling them to search for their favorite movies, TV shows, and series. Dive deeper into the world of entertainment by exploring detailed information about movies and easily bookmarking their favorites for later viewing. Was built using angular.
 
-[Project Reports](https://codecrafttech.atlassian.net/jira/software/c/projects/WTTNTJ/boards/36/backlog).
+## Features:
+- **User Authentication:** Seamlessly sign up and sign in to access the extensive library of content.
+- **Search and Discover:** Find your preferred movies, TV shows, and series effortlessly.
+- **Movie Details:** Get comprehensive information about movies, including cast, plot, and ratings.
+- **Bookmarking:** Save your favorite content for quick access.
+
+### Testing and Development
+This app is rigorously tested using Angular's built-in testing features. We've ensured code quality and reliability by incorporating Angular testing files and components. Additionally, we've employed Angular Storybook for component testing and showcasing.
+
+**Angular Storybook** is a tool that allows developers to build and test UI components in isolation. It offers a visual development environment where you can create, document, and interact with individual components, making UI development and testing a breeze.
+
+Visit the Live [Moive OTT Website]([https://your-app-website.com](https://movie-ott-watch.netlify.app)) to start your entertainment journey today!
 
 ## Development server
 
