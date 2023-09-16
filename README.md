@@ -13,7 +13,7 @@ This app is rigorously tested using Angular's built-in testing features. We've e
 
 **Angular Storybook** is a tool that allows developers to build and test UI components in isolation. It offers a visual development environment where you can create, document, and interact with individual components, making UI development and testing a breeze.
 
-Visit the Live [Moive OTT Website]([https://your-app-website.com](https://movie-ott-watch.netlify.app)) to start your entertainment journey today!
+Visit the Live [Moviee OTT Website](https://movie-ott-watch.netlify.app) to start your entertainment journey today!
 
 ## Development server
 
